@@ -44,10 +44,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		/// </summary>		
 		private string aliasName = string.Empty;
 
-		/// <summary>
-		/// Description of identified object
-		/// </summary>		
-		private string description = string.Empty;
+
 		
 		/// <summary>
 		/// Initializes a new instance of the IdentifiedObject class.

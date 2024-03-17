@@ -89,9 +89,14 @@
     <Compile Include="Core\IdentifiedObject.cs" />
     <Compile Include="Core\PowerSystemResource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wires\WindingTest.cs" />
-    <Compile Include="Wires\PowerTransformer.cs" />
-    <Compile Include="Wires\TransformerWinding.cs" />
+    <Compile Include="Wires\ACLineSegment.cs" />
+    <Compile Include="Wires\Conductor.cs" />
+    <Compile Include="Wires\ConnectivityNode.cs" />
+    <Compile Include="Wires\DCLineSegment.cs" />
+    <Compile Include="Wires\PerLengthImpedance.cs" />
+    <Compile Include="Wires\PerLengthSequenceImpedance.cs" />
+    <Compile Include="Wires\SeriesCompensator.cs" />
+    <Compile Include="Wires\Terminal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Common.csproj">
