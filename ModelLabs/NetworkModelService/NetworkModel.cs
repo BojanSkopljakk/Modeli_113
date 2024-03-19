@@ -33,9 +33,64 @@ namespace FTN.Services.NetworkModelService
 			resourcesDescs = new ModelResourcesDesc();			
 			Initialize();
 		}
-	
+
+		public List<long> GetAllGIDs()
+		{
+			List<long> ret = new List<long>();
+			foreach (var item in networkDataModel)
+			{
+				ret.AddRange(item.Value.Entities.Keys);
+			}
+
+			return ret;
+		}
+
+		public List<ModelCode> GetAllProperties(long gid)
+		{
+			short type = ModelCodeHelper.ExtractTypeFromGlobalId(gid);
+			return resourcesDescs.GetAllPropertyIds((DMSType)type);
+		}
+
+		public List<ModelCode> GetAllConcreteModelCodes()
+		{
+			return resourcesDescs.NonAbstractClassIds;
+		}
+
+		public List<ModelCode> GetAllModelProps(ModelCode code)
+		{
+			return resourcesDescs.GetAllPropertyIds(code);
+		}
+
+		public List<ModelCode> GetReferenceProps(long gid)
+		{
+			List<ModelCode> allProps = GetAllProperties(gid);
+			List<ModelCode> ret = new List<ModelCode>();
+
+			for (int i = 0; i < allProps.Count; i++)
+			{
+				var val = (PropertyType)((long)allProps[i] & (long)ModelCodeMask.MASK_ATTRIBUTE_TYPE);
+				if (val == PropertyType.Reference || val == PropertyType.ReferenceVector)
+				{
+					ret.Add(allProps[i]);
+				}
+			}
+
+			return ret;
+		}
+
+		public List<ModelCode> GetProperties(List<ModelCode> codes)
+		{
+			List<ModelCode> ret = new List<ModelCode>();
+			foreach (var x in codes)
+			{
+				ret.AddRange(GetAllModelProps(x));
+			}
+
+			return ret;
+		}
+
 		#region Find
-		
+
 		public bool EntityExists(long globalId)
 		{
 			DMSType type = (DMSType)ModelCodeHelper.ExtractTypeFromGlobalId(globalId);

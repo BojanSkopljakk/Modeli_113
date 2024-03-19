@@ -1,0 +1,102 @@
+﻿<delta id="0">
+  <operations>
+    <operation type="insert">
+      <ResourceDescriptions count="8">
+        <ResourceDescription>
+          <id gid="0x00000001ffffffff" type="CONNECTNODE" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="123124" />
+            <Property id="IDOBJ_NAME" value="CONNODE1" />
+            <Property id="IDOBJ_ALIAS" value="ConNode_1" />
+            <Property id="CONNECTNODE_DESC" value="Prvi Conn Node" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000002ffffffff" type="PERLENGTHSEQIMP" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="34242" />
+            <Property id="IDOBJ_NAME" value="IMPEDANCE" />
+            <Property id="IDOBJ_ALIAS" value="PerLenImp" />
+            <Property id="PERLENGTHSEQIMP_R" value="9" />
+            <Property id="PERLENGTHSEQIMP_R0" value="10" />
+            <Property id="PERLENGTHSEQIMP_X" value="9" />
+            <Property id="PERLENGTHSEQIMP_X0" value="10" />
+            <Property id="PERLENGTHSEQIMP_B0CH" value="10" />
+            <Property id="PERLENGTHSEQIMP_BCH" value="9" />
+            <Property id="PERLENGTHSEQIMP_G0CH" value="10" />
+            <Property id="PERLENGTHSEQIMP_GCH" value="9" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000003ffffffff" type="SERIES_COMP" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="34534" />
+            <Property id="IDOBJ_NAME" value="COMP" />
+            <Property id="IDOBJ_ALIAS" value="Comp" />
+            <Property id="SERIES_COMP_R" value="5" />
+            <Property id="SERIES_COMP_R0" value="5" />
+            <Property id="SERIES_COMP_X" value="5" />
+            <Property id="SERIES_COMP_X0" value="5" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000004ffffffff" type="DCLINESEG" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="9421" />
+            <Property id="IDOBJ_NAME" value="DCLINE" />
+            <Property id="IDOBJ_ALIAS" value="DCLinija" />
+            <Property id="COND_LENGTH" value="10" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000005ffffffff" type="ACLINESEG" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="643" />
+            <Property id="IDOBJ_NAME" value="ACLINE" />
+            <Property id="IDOBJ_ALIAS" value="ACLine" />
+            <Property id="COND_LENGTH" value="9" />
+            <Property id="ACLINESEG_R" value="9" />
+            <Property id="ACLINESEG_R0" value="9" />
+            <Property id="ACLINESEG_X" value="9" />
+            <Property id="ACLINESEG_X0" value="9" />
+            <Property id="ACLINESEG_B0CH" value="9" />
+            <Property id="ACLINESEG_BCH" value="9" />
+            <Property id="ACLINESEG_G0CH" value="9" />
+            <Property id="ACLINESEG_GCH" value="9" />
+            <Property id="ACLINESEG_PERLENGTHIMP" value="0x00000002ffffffff" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000006ffffffff" type="TERMINAL" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="87932" />
+            <Property id="IDOBJ_NAME" value="TERMINAL1" />
+            <Property id="IDOBJ_ALIAS" value="Terminal_1" />
+            <Property id="TERMINAL_CONNECTNODE" value="0x00000001ffffffff" />
+            <Property id="TERMINAL_CONDEQ" value="0x00000003ffffffff" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000006fffffffe" type="TERMINAL" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="2152323" />
+            <Property id="IDOBJ_NAME" value="TERMINAL2" />
+            <Property id="IDOBJ_ALIAS" value="Terminal_2" />
+            <Property id="TERMINAL_CONNECTNODE" value="0x00000001ffffffff" />
+            <Property id="TERMINAL_CONDEQ" value="0x00000004ffffffff" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000006fffffffd" type="TERMINAL" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="89731" />
+            <Property id="IDOBJ_NAME" value="TERMINAL3" />
+            <Property id="IDOBJ_ALIAS" value="Terminal_3" />
+            <Property id="TERMINAL_CONNECTNODE" value="0x00000001ffffffff" />
+            <Property id="TERMINAL_CONDEQ" value="0x00000005ffffffff" />
+          </Properties>
+        </ResourceDescription>
+      </ResourceDescriptions>
+    </operation>
+  </operations>
+</delta>
